@@ -1,8 +1,8 @@
-// Section
+/* Section */
 section {
   padding: 5rem 0rem;
 
-  @include respond(phone) {
+  @media (max-width: 37.5em) { /* phone */
     border: none;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -13,41 +13,52 @@ section {
     gap: 2rem;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-    @include respond(tab-port) {
+
+    @media (max-width: 56.25em) { /* tab-port */
       grid-template-columns: 1fr;
       grid-template-rows: auto;
     }
+
     padding: 0 1.5rem;
-    @include respond(phone) {
+
+    @media (max-width: 37.5em) { /* phone */
       padding: 0;
     }
+
     & p + p {
       margin-top: 1rem;
     }
+
     & span {
       margin-top: 2rem;
     }
   }
 }
+
+/* Container */
 .container {
   width: 100%;
   padding: 0 1.5rem;
   margin: 0 auto;
   max-width: 1140px;
-  @include respond(tab-land) {
+
+  @media (max-width: 75em) { /* tab-land */
     max-width: 960px;
     width: 100%;
   }
-  @include respond(tab-port) {
+
+  @media (max-width: 56.25em) { /* tab-port */
     max-width: 720px;
     width: 100%;
     justify-content: center;
   }
-  @include respond(tab-port-sm) {
+
+  @media (max-width: 48em) { /* tab-port-sm */
     max-width: 720px;
     width: 100%;
   }
-  @include respond(phone) {
+
+  @media (max-width: 37.5em) { /* phone */
     max-width: 540px;
     width: 100%;
   }
